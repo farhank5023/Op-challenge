@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+
+
+<body onload="onload=startGame(),resetScore(),resetTimer()">
+    <!-- <div class="drag" id="drag1"draggable="true" ondragstart="dragpoint(event)" data-operator="+"><img src="./img/plus.png" width="60px" height="55px"></div>  -->
+    <div class="drag" id="drag1"draggable="true" ondragstart="dragpoint(event)" data-operator="+"><label>+</label></div>
+    <div class="drag" id="drag2"draggable="true" ondragstart="dragpoint(event)" data-operator="-"><label>-</label></div>
+    <div class="drag" id="drag3"draggable="true" ondragstart="dragpoint(event)" data-operator="*"><label>x</label></div>
+    <div class="drag" id="drag4"draggable="true" ondragstart="dragpoint(event)" data-operator="/"><label>/</label></div>
+    <div class="drag" id="drag5"draggable="true" ondragstart="dragpoint(event)" data-operator=")"><label>)</label></div>
+    <div class="drag" id="drag6"draggable="true" ondragstart="dragpoint(event)" data-operator="("><label>(</label></div>
+    <span id="popup"></span>
+   
+    <p id="timer_s">Time Left: <span id="timer">05:00</span></p>
+    <div class="message"><p>Instructions:<br>i)Drag and drop the correct operator.<br>ii)Once pressed on next button then previous is not possible<br>iii)While calculating round off to nearest value.</p></div>
+
+<!--PAGE 1-->
+   
+<div class="page" id="page1" style="display: block;">
+    <h2>Question 1</h2>
+    <span id="inputs1" ></span>
+    <button type="button" onclick="showPage('page2')">Next Question</button><br><br>
+   <label id="res">Result:<br> </label><input type="number" placeholder="result" id="answer_5"><br><br><br>
+
+   
+</div>
+
+<br>
+
+<!--PAGE 2-->
+<div class="page" id="page2" style="display: none;">
+    <h2>Question 2</h2>
+    <span id="inputs2" style="width: auto;"></span>
+    <button type="button" onclick="showPage('page3')">Next Question</button><br><br>
+    <label id="res">Result:<br>  </label><input type="number" placeholder="result" id="answer_7"><br><br><br>
+
+</div>
+
+<!--PAGE 3-->
+   
+<div class="page" id="page3" style="display: none;">
+    <h2>Question 3</h2>
+    <span id="inputs3" style="width: auto;"></span><br><br>
+    <label id="res">Result:<br>  </label> <input type="number" placeholder="result" id="answer_9"><br>
+     <button style="margin-top: 13%;" type="submit" id="submit" onclick="check(),alert('Congratulations!!Game Successfully Completed'),gameEnd()">Submit</button>
+     
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="./js/func.js"></script>
+
+
+</body>
+</html>
